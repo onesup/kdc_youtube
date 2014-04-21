@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<!-- Facebook Open Graphic Protocol -->
+<html prefix="og: http://ogp.me/ns#" xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Skin Birthday">
+	<meta name = "viewport" content = "width=device-width, user-scalable=no" />
+	<meta property="og:url" content="https://<%= Rails.application.secrets.url%>" />
+	<meta property="og:image" content="<%= asset_url("sns/facebook_share.jpg") %>" />
+	<meta property="og:title" content="Skin Birthday" />
+	<meta property="og:description" content="첫구매 고객님에게 시크릿 프로그래밍 에센스(40ml)를 선물로 드립니다."/>
+	<title>::: su:m37 ::: Skin Birthday</title>
+	<%= stylesheet_link_tag "mobile", media: "all"%>
+	<%= javascript_include_tag "mobile"%>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '<%= Rails.application.secrets.ga_tracking_id%>', '<%= Rails.application.secrets.url %>');
+<% unless session[:referer].nil? %>
+	ga('set', 'referrer', '<%= session[:referer] %>');
+<% end %>
+ga('send', 'pageview');
+</script>
+</body>
+</html>

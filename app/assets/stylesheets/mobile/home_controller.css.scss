@@ -1,0 +1,827 @@
+/*----------------------------------------------------
+* Author: Dongju Seo (geekerati@geekerati.me)
+* Date: March 10, 2014
+*----------------------------------------------------*/
+
+/*-----------------------------------------------------
+* Reset & Base
+*----------------------------------------------------*/
+*, body, div, ul, li {margin:0;padding:0;}
+a {text-decoration: none;}
+div {position:relative;}
+image {border:0}
+
+body{background: #d4e5e9;}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ".";
+  clear: both;
+  height: 0;
+}
+* html .clearfix { height: 1%; }
+//.clearfix { display: block; }
+.clickable-link {
+  display: block;
+  text-indent: -9999em;
+}
+* { -webkit-text-size-adjust:none; max-width:100%; }
+.container-close {
+  margin-bottom: 10%;
+  background: #fff;
+
+  .btn_close {
+    width: 25%;
+    padding: 2%;
+    float: right;
+  }
+}
+
+.input-default {
+  margin: 0;
+  padding: 0 3%;
+  border: 1px solid #bebebe;
+  background: #fff;
+  font-size: 1.5em;
+}
+
+/*-----------------------------------------------------
+* index.html.erb
+*----------------------------------------------------*/
+#main {
+    width: 480px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;
+
+    .header {
+
+      .top {
+		 text-align:center;
+        .container-logo {
+          width: 100px;
+          float: left;
+		  text-align:left;
+          .logo {
+            width: 90px;
+          }
+        }
+
+        .event-date {
+          width: 160px;
+          float: right;
+		  text-align:right;
+		  img{
+			  width:150px;
+		  }
+        }
+
+		.title{
+			text-align:center;
+	        padding-top:15px;
+	  	      @media (max-width: 320px) {
+	            padding-top:10px;
+	  	      }
+			margin-bottom:15px;
+			.tagline {
+	          width: 260px;
+	  	      @media (max-width: 320px) {
+	  	        width: 246px;
+	  	      }
+	        }
+		}
+
+        .container-btn_gift {
+		  margin:0 auto;
+		  display:block;
+		  width: 220px;
+		  text-align:center;
+	  	      @media (max-width: 320px) {
+	  	        width: 180px;
+	  	      }
+		  img{
+		  	width: 220px;
+	  	      @media (max-width: 320px) {
+	  	        width: 180px;
+	  	      }
+		  }
+        }
+
+        .container-product {
+          margin-top: 25px;
+		  text-align:center;
+          .product {
+            width: 320px;
+          }
+
+         // .text_product {
+//            margin-top: -45px;
+//            width: 85%;
+//            float: left;
+          //}
+
+        }
+
+
+        .container-sns {
+		 
+		  margin:20px 10px 20px 10px;
+		  padding:25px 0;
+		  border-top:1px solid #a4b7bf;
+		  border-bottom:1px solid #a4b7bf;
+		  text-align:center;
+
+          .text_sns {
+            margin-bottom: 10px;
+			text-align:center;
+			width:200px;
+	  	      @media (max-width: 320px) {
+	  	        width:174px;
+	  	      }
+          }
+
+          .btn_kakaotalk {
+			text-align:center;
+            margin-bottom: 10px;
+			width:320px;
+	  	      @media (max-width: 320px) {
+	  	        width:280px;
+	  	      }
+          }
+
+          .btn_kakaostory {
+            margin-bottom: 10px;
+			text-align:center;
+			width:320px;
+	  	      @media (max-width: 320px) {
+	  	        width:280px;
+	  	      }
+          }
+
+          .btn_facebook {
+			  text-align:center;
+			  width:320px;
+	  	      @media (max-width: 320px) {
+	  	        width:280px;
+	  	      }
+          }
+        }
+
+
+		.container-sum-sns{
+			padding:20px 10px;
+			border-top:1px solid #a4b7bf;
+			margin:20px 10px 20px 10px;
+			.left{
+				float:left;
+				img{
+					width:40px;
+				}
+			}
+			.right{
+				float:right;
+				img{
+					height:40px;
+				}
+			}
+		}
+
+        .container-promotion {
+			margin:10px;
+          .text_screte-programming-essence {
+			display:block;
+            float: left;
+			width:164px;
+			padding-left:10px;
+          }
+
+          .btn_product-detail {
+            margin-top: -2%;
+			width:85px;
+			padding-right:10px;
+			display:block;
+            float: right;
+          }
+
+          .video {
+            margin-top: 4%;
+            width: 95%;
+          }
+        }
+      }
+    }
+
+
+}
+    .footer {
+      background: #fff;
+      margin-top: 5px;
+//      margin-top: 6%;
+//      padding-left: 3%;
+//      padding-right: 3%;
+
+      .wrapper-background {
+	    width: 480px;
+		margin:0 auto;  
+        background: #fff;
+		
+		p{
+			margin:0 10px;
+	   	    padding-left: 7px;
+		}
+		
+		p.first{
+			padding-bottom:10px;
+			margin-bottom:10px;
+			border-bottom:1px solid #ccc
+		}
+
+        .text_notes {
+          margin-top: 20px;
+          width: 310px;
+  	      @media (max-width: 320px) {
+  	        width:290px;
+  	      }
+		  
+        }
+
+        .divider_03 {
+          width: 50%;
+          margin-top: 7%;
+          margin-bottom: 10px;
+        }
+
+        .text_copyrights {
+          margin-bottom: 10px;
+          width: 300px;
+          background: #fff;
+  	      @media (max-width: 320px) {
+  	        width:271px;
+  	      }
+        }
+      }
+    }
+/*-----------------------------------------------------
+* product.html.erb
+*----------------------------------------------------*/
+#product {
+  width: 480px;
+  margin: 0 auto;
+
+  .container-product {
+    width: 480px;
+    margin: 0 auto;
+    margin-bottom: 60px;
+	text-align:center;
+
+
+    .text-top {
+      width: 200px;
+      margin-bottom: 10px;
+	  text-align:center;
+	      @media (max-width: 767px) {
+	        width: 240px;
+	      }
+    }
+
+    .product {
+      width: 260px;
+	  margin-bottom: 6%;
+	  text-align:center;
+      @media (max-width: 767px) {
+         width: 270px;
+      }
+    }
+
+    .text-bottom {
+      width: 270px;
+	  text-align:center;
+      @media (max-width: 767px) {
+         width: 290px;
+      }
+    }
+  }
+}
+/*-----------------------------------------------------
+* birthday.html.erb
+*----------------------------------------------------*/
+#birthday {
+  width: 480px;
+  margin: 0 auto;
+
+  .popup-birthday_text-top {
+    margin:10px 0 0;
+	text-align:center;
+	img{
+	 width: 259px;	
+	}
+  }
+
+  .container-info {
+    width: 290px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #fff;
+	    @media (max-width: 320px) {
+	       width: 270px;
+	    }	
+	.container-text-top2{
+	 text-align:center;	
+	 padding:5px 0;
+		.text-top2{
+		width: 260px;	
+		}
+	}
+	.container-info-inner{
+		width: 200px;
+		margin: 0 auto;
+	}
+    .container-year {
+	  float:left;
+	  padding-left: 10px;
+      .select_year {
+        width: 85px;
+        height: 30px;
+        margin-right: 0px;
+        padding-left: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        border: 0;
+        float: left;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
+        background: asset-url("mobile/btn_selectYear100.png") no-repeat left top;
+
+        @media (max-width: 767px) {
+	      width: 85px;
+	      height: 30px;
+          padding-left: 10px;
+          font-size: 10px;
+          background: asset-url("mobile/btn_selectYear50.png") no-repeat left top;
+        }
+/*
+        @media (max-width: 480px) {
+          width: 79px;
+          height: 26px;
+          padding-left: 10px;
+          font-size: 10px;
+          background: asset-url("mobile/btn_selectYear50.png") no-repeat left top;
+        }
+*/
+      }
+
+      .label-year {
+        /*float: left;*/
+        padding: 7px 10px 0 0;
+        width: 9px;
+      }
+    }
+
+
+  .container-month {
+	   float:left;
+	   padding-left:63px;
+    .select_month {
+      width: 80px;
+      height: 30px;
+      margin-right: 5px;
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 0;
+      float: left;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      background: asset-url("mobile/btn_selectMonthDay100.png") no-repeat left top;
+
+      @media (max-width: 767px) {
+        width: 54px;
+        height: 26px;
+        padding-left: 10px;
+        font-size: 10px;
+        background: asset-url("mobile/btn_selectMonthDay50.png") no-repeat left top;
+      }
+/*
+      @media (max-width: 480px) {
+        width: 54px;
+        height: 26px;
+        padding-left: 5px;
+        font-size: 10px;
+        background: asset-url("mobile/btn_selectMonthDay50.png") no-repeat left top;
+      }
+*/
+    }
+
+    .label-month {
+      float: left;
+      padding: 7px 10px 0 0;
+      width: 10px;
+      display:block;
+    }
+  }
+
+  .container-day {
+ 	   float:left;
+    .select_day {
+      width: 90px;
+      height: 30px;
+      margin-right: 3px;
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: bold;
+      border: 0;
+      float: left;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+      background: asset-url("mobile/btn_selectMonthDay100.png") no-repeat left top;
+
+      @media (max-width: 767px) {
+        width: 54px;
+        height: 26px;
+        padding-left: 10px;
+        font-size: 10px;
+        background: asset-url("mobile/btn_selectMonthDay50.png") no-repeat left top;
+      }
+
+      /*
+      @media (max-width: 480px) {
+        width: 54px;
+        height: 26px;
+        padding-left: 5px;
+        font-size: 10px;
+        background: asset-url("mobile/btn_selectMonthDay50.png") no-repeat left top;
+      }
+      */
+
+    }
+
+    .label-day {
+      float: left;
+      padding: 7px 10px 0 0;
+      width: 10px;
+      display:block;
+    }
+  }
+  }
+  .container-text-guide{
+	  text-align:center;
+	  padding:10px 0 0;
+	  img{
+		  width:274px;
+	  }
+  	
+  }
+  .container-name {
+    padding-left: 21%;
+    margin-bottom: 2%;
+	margin-top:10px;
+
+    .text_name {
+      width: 10%;
+      margin-right: 3%;
+    }
+
+    .info_input_name {
+      width: 50%;
+      height: 30px;
+      font-size: 13px;
+	  -webkit-appearance: none;
+	  border-radius: 0;
+    }
+  }
+
+  .container-phone {
+    padding-left: 13%;
+
+    .text_phone {
+      width: 21%;
+    }
+
+    .info_input_call {
+      width: 45%;
+      height: 30px;
+      font-size: 13px;
+	  -webkit-appearance: none;
+	  border-radius: 0;
+    }
+  }
+
+  .divider_01 {
+
+    margin: 10px 0;
+  }
+  .container-terms-master {
+	  display:block;
+	  padding-left:100px;
+	  padding-top:5px;
+  }
+  .container-terms-master.second {
+	  padding-top:10px;
+  }
+  .container-terms {
+    padding-left: 13%;
+
+    .text_terms {
+      width: 50%;
+      margin-right: 5%;
+    }
+    .info_input_agree {
+      margin-bottom: -1%;
+      width: 7%;
+      height: 37px;
+      background: #fff;
+      border: 1px solid #bebebe;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -o-appearance: none;
+    }
+  }
+
+
+}
+
+
+/*-----------------------------------------------------
+* term.html.erb
+*----------------------------------------------------*/
+.container-close-edited {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+
+  .btn_close {
+    float: right;
+  }
+}
+#terms {
+  margin: 0;
+  padding: 0 20px;
+  color: #333;
+  font-family: 'Dotum';
+  font-size: 13px;
+  line-height: 15px;
+  word-break: break-all;
+  white-space: pre-line;
+}
+
+
+/*-----------------------------------------------------
+* thanks.html.erb
+*----------------------------------------------------*/
+#thanks {
+  width: 600px;
+  margin: 0 auto;
+
+  .text_thanks {
+    padding-left: 22%;
+    width: 55%;
+  }
+
+  .btn_finish {
+    margin-top: 5%;
+    padding-left: 30%;
+    width: 40%;
+  }
+}
+
+/*-----------------------------------------------------
+* duplication.html.erb
+*----------------------------------------------------*/
+#duplication {
+  width: 640px;
+  margin: 0 auto;
+
+  .text_duplicate {
+    width: 70%;
+    padding-left: 15%;
+  }
+
+  .btn_duplicate {
+    width: 40%;
+    margin-top: 6%;
+    padding-left: 30%;
+  }
+}
+
+/*-----------------------------------------------------
+* coupon.html.erb
+*----------------------------------------------------*/
+#coupon {
+  width: 600px;
+  margin: 0 auto; }
+
+/*-----------------------------------------------------
+* thanks.html.erb
+*----------------------------------------------------*/
+#thanks {
+  width: 600px;
+  margin: 0 auto; }
+  #thanks .text_thanks {
+    padding-left: 22%;
+    width: 55%; }
+  #thanks .btn_finish {
+    margin-top: 5%;
+    padding-left: 30%;
+    width: 40%; }
+
+/*-----------------------------------------------------
+* duplication.html.erb
+*----------------------------------------------------*/
+#duplication {
+  width: 600px;
+  margin: 0 auto; }
+  #duplication .text_duplicate {
+    width: 70%;
+    padding-left: 15%; }
+  #duplication .btn_duplicate {
+    width: 40%;
+    margin-top: 6%;
+    padding-left: 30%; }
+
+/*-----------------------------------------------------
+* coupon.html.erb
+*----------------------------------------------------*/
+#coupon {
+  width: 480px;
+  margin: 0 auto; }
+  #coupon .text_coupon {
+    width: 70%;
+    padding-left: 15%; }
+  #coupon .container-buttons {
+    margin-top: 5%;
+    padding-left: 10%; }
+    #coupon .container-buttons .btn_coupon_use {
+      width: 42%;
+      margin-right: 3%; }
+    #coupon .container-buttons .btn_coupon_notuse {
+      width: 42%; }
+
+/*-----------------------------------------------------
+* coupon_success.html.erb
+*----------------------------------------------------*/
+#coupon_success {
+
+  width: 480px;
+  margin: 5% auto 0 auto;
+  padding: 0; }
+  .container-logo {
+    margin-bottom: 30px;
+	padding-left:10px;
+  }
+  .container-logo .logo {
+	  width: 80px; 
+  }
+  .coupon_tops{
+	text-align:center;
+	position:relative;
+		.name {
+	    position: absolute;
+	    left: 10px;
+	    top: 0px;
+	    font-size: 18px;
+		letter-spacing:-1px; 
+		font-weight:bold;
+		width:85px;
+		text-align:right;
+	    @media (max-width: 320px) {
+	      width:75px; }
+	    }
+	  .text_coupon_top {
+		  width:330px;
+	    @media (max-width: 320px) {
+	      width:290px;
+	       }
+	   }
+  }
+
+
+		  
+  #coupon_success .container-product {
+    margin-bottom: 5%;
+	text-align:center;}
+	#coupon_success .container-product .coupon_img{
+		margin-bottom:10px;
+	}
+	#coupon_success .container-product .coupon_imgs {
+      width: 330px;
+      margin-bottom: 0; 
+       @media (max-width: 320px) {
+       width:290px;
+       }
+      }
+  #coupon_success .text_product_caution {
+    width: 300px; 
+    @media (max-width: 320px) {
+    width:250px;
+    }
+  }
+  #coupon_success .bottom {
+	margin:10px 0;
+    padding: 20px 0;
+    background: white;
+	text-align:center;
+   }
+    #coupon_success .bottom .text_coupon_caution2 {
+      width: 290px; 
+      @media (max-width: 320px) {
+      width:265px;
+       }
+	}
+    #coupon_success .bottom .btn_coupon_use_before {
+      margin-top: 5%;
+      width: 90%; }
+    #coupon_success .bottom .btn_coupon_use_after {
+      margin-top: 5%;
+      width: 90%; }
+
+
+.icheckbox_minimal{
+  -ms-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
+}
+
+
+
+.agree_checkbox{
+	float:left;
+}
+
+.text_terms{
+	float:left;
+}
+.container-terms{
+  padding-top:3%;
+  width: 50%;
+	float:left;
+}
+
+.container-detail-terms{
+  width: 30%;
+  float:left;
+}
+
+.container-coupon{
+  width:180px;
+  margin:0 auto;
+  padding:15px;
+  input{
+	  width:180px;
+  }
+}
+
+.container-text_caution{
+	background:#c6d6da;
+	padding: 20px;
+	.text_caution{
+	  width: 237px;
+	}	
+}
+
+
+.info_input_radio{
+  margin-top: 5px;
+  margin-left: 10px;
+  float: left;
+  border-radius: 0;
+  box-shadow: none;
+  -ms-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	-o-transform: scale(1.2);
+}
+
+.text_terms{
+  float: left;
+  width: 90px;
+  padding-top: 7px;
+}
+.text_terms2{
+  float: left;
+  width: 110px;
+  padding-top: 7px;
+}
+
+
+.detail_terms{
+  width: 82px;
+
+}
+.error{
+  
+}
+.check_error{
+  float: left;
+}
+.field_with_errors {
+  display: inline;
+}
+
+.info_birth_date{
+  display: table;
+  clear: both;
+}

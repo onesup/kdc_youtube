@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
+<head prefix="og: http://ogp.me/ns#">
+  <title>영웅 망토</title>
+  
+  <%= yield :mobile %>
+
+  <%= stylesheet_link_tag    'facebook', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'facebook', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta property="fb:app_id" content="<%= Rails.application.secrets.fb_app_id %>" />
+  <meta property="og:type"   content="myapp:myobject" />
+  <meta property="og:url"  content="https://<%= Rails.application.secrets.url %>" />
+  <meta property="og:title"  content="숨" />
+  <meta property="og:image"  content="" />
+
+</head>
+<body id="main">
+  <div id="fb-root"></div>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/ko_KR/all.js', function(){
+    FB.init({
+      appId      : '<%= Rails.application.secrets.fb_app_id %>',
+      channelUrl : '//<%= Rails.application.secrets.url %>/channel.html', // Channel file for x-domain comms
+      status     : true, // check login status
+      cookie     : true, // enable cookies to allow the server to access the session
+      xfbml      : true  // parse XFBML
+    });
+    FB.Canvas.setSize();
+    FB.Canvas.setAutoGrow();    
+  });
+});
+
+
+</script>
+<%= yield %>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46149688-5', 'mnv.kr');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

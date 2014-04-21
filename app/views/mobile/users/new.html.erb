@@ -1,0 +1,85 @@
+<div id="birthday">
+  <%= form_for([:mobile, @user]) do |f| %>
+  <div class="container-close clearfix">
+    <a href="javascript:history.go(-1)" class="btn_close">
+      <%= image_tag("mobile/btn_close.png", class:"btn_close") %>
+    </a>
+  </div>
+  <div class="popup-birthday_text-top">
+    <%= image_tag("mobile/popup-birthday_text-top.png", class:"text-top") %>
+  </div>
+  <div class="container-info clearfix">
+	    <div class="container-text-top2">
+			<%= image_tag("mobile/popup-birthday_text-guide2.png", class:"text-top2") %>
+		</div> 
+    	<div class="info_birth_date clearfix">
+	        <div class="container-month clearfix">
+						<%= select_tag "user[birthday_month]", 
+							options_for_select(months_option_helper, Time.now.month),
+		          {class: 'select_month', id:"select_month"}
+	          %>
+	          <%= image_tag("mobile/popup-birthday_label-month.png", class:"label-month") %>
+	        </div>
+	        <div class="container-day clearfix">
+						<%= select_tag "user[birthday_day]", 
+							options_for_select(days_option_helper, Time.now.day),
+		          {name:'user[birthday_day]', class: 'select_day', id: "select_day"} %>
+	          <%= image_tag("mobile/popup-birthday_label-day.png", class:"label-day") %>
+	        </div>
+      </div>
+  </div>
+  <div class="container-text-guide">
+  <%= image_tag("mobile/popup-birthday_text-guide.png", class:"text-guide") %>
+  </div>
+  <div class="container-name">
+    <% if @user.errors[:name].any? %>
+      <span>*</span>
+    <% end %>
+    <%= image_tag("mobile/text_name.png", class:"text_name") %>
+    <%= f.text_field(:name, 
+    {"data-name" => "name", id: "info_name", 
+      class:"input-default info_input_name", value: "", maxlength: "12"})%>
+  </div>
+  <div class="container-phone">
+    <% if @user.errors[:phone].any? %>
+      <script>//location.replace("<%= mobile_unique_error_path() %>");</script>
+      <span>*</span>
+    <% end %>
+    <%= image_tag("mobile/text_phone.png", class:"text_phone") %>
+    <%= f.phone_field(:phone, {"data-name" => "phone", 
+    id: "info_phone", class:"input-default info_input_call", value: "", maxlength: "13"})%>
+  </div>
+  <%= image_tag("mobile/divider.png", class:"divider_01") %>
+  <div class="container-terms-master clearfix">
+    <% if @user.errors[:agree].any? %>
+      <script>alert("개인정보활용 동의를 확인해주세요.");</script>
+      <span class="check_error">*</span>
+    <% end %>
+    <%= image_tag("mobile/text_terms.png", class:"text_terms") %>
+    <%= f.check_box "agree", 
+    {"data-name" => "agree", id:"info_input_radio", 
+      class: "info_input_radio" }%>
+  </div>
+  <div class="container-terms-master clearfix">
+    <% if @user.errors[:agree2].any? %>
+      <script>alert("개인정보취급위탁 동의를 확인해주세요.");</script>
+      <span class="check_error">*</span>
+    <% end %>
+    <%= image_tag("mobile/text_terms2.png", class:"text_terms2") %>
+    <%= f.check_box "agree2", 
+    {"data-name" => "agree2", id:"info_input_radio2", 
+      class: "info_input_radio" }%>
+  </div>  
+  <div class="container-terms-master second clearfix">
+  	<a href="/mobile/terms" onclick="ga('send', 'event', 'button', 'click', 'm 개인정보동의 활용');"><%= image_tag("mobile/btn_detail_terms.png", class:"detail_terms") %></a>
+  </div>
+  <div class="container-coupon">
+    <!-- if it is not duplicate -->
+    <%= image_submit_tag("mobile/btn_get_coupon.png", class:"btn_get_coupon", onclick:"ga('send', 'event', 'button', 'click', 'm 완료');") %>
+    <!-- else -->
+  </div>
+  <div class="container-text_caution">
+  	<%= image_tag("mobile/text_caution.png", class:"text_caution") %>
+  </div>
+  <%end%>
+</div>
