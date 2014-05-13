@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get 'web_switch' => 'web_switch#index'
   get 'fb_switch' => 'fb_switch#index'
 
-  root 'web_switch#index'
+  root 'mobile/home#index'
 
   # resources :users
   devise_for :users
