@@ -22,4 +22,5 @@ vi staging.rb
 set :ssh_options, {keys: %w(/Users/onesup/.ssh/ids/bday.mnv.kr/deployer/id_rsa)}
 cd ./
 vi .gitignore
+hhh
 ```
