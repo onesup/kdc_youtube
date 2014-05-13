@@ -17,14 +17,22 @@ body{
 	width: 100%;
 	margin-top: 3%;
 }
-
+.title{
+  width: 100%;
+}
 
 .title_label{
 	width: 85%;
 	margin: 3% 0 3% 0;
 }
+.kdc_img{
+  width: 100%;
+}
 
-
+.youtube_thumb_img{
+  width: 32%;
+  
+}
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -39,3 +47,13 @@ body{
   display: block;
   text-indent: -9999em;
 }
+.btn_buy_img{
+width: 45%;  
+}
+.btn_kt_img{
+width: 15%;   
+}
+.btn_ks_img{
+width: 15%; 
+}
+
