@@ -15,7 +15,10 @@ class Admin::ViralActionsController < ApplicationController
       sum(case when viral_actions.platform = 'kakaostory' then 1 else 0 end) as kakaostory_count, 
     	sum(case when viral_actions.platform = 'kakaotalk' then 1 else 0 end) as kakaotalk_count, 
       sum(case when viral_actions.platform = 'purchase' then 1 else 0 end) as purchase_count, 
-    	sum(case when viral_actions.platform = 'youtube' then 1 else 0 end) as youtube_count, 
+    	sum(case when viral_actions.platform = 'youtube' then 1 else 0 end) as youtube_count,
+      sum(case when viral_actions.platform = 'Youtube_thumb_1' then 1 else 0 end) as youtube_thumb_1_count,
+      sum(case when viral_actions.platform = 'Youtube_thumb_2' then 1 else 0 end) as youtube_thumb_2_count,
+      sum(case when viral_actions.platform = 'Youtube_thumb_3' then 1 else 0 end) as youtube_thumb_3_count, 
     	count(*) as total_count")
         .group("date(convert_tz(viral_actions.created_at,'+00:00','+09:00'))")
         .order("date(viral_actions.created_at)")
@@ -24,6 +27,9 @@ class Admin::ViralActionsController < ApplicationController
       sum(case when viral_actions.platform = 'kakaotalk' then 1 else 0 end) as kakaotalk_count, 
       sum(case when viral_actions.platform = 'purchase' then 1 else 0 end) as purchase_count, 
       sum(case when viral_actions.platform = 'youtube' then 1 else 0 end) as youtube_count, 
+      sum(case when viral_actions.platform = 'Youtube_thumb_1' then 1 else 0 end) as youtube_thumb_1_count,
+      sum(case when viral_actions.platform = 'Youtube_thumb_2' then 1 else 0 end) as youtube_thumb_2_count,
+      sum(case when viral_actions.platform = 'Youtube_thumb_3' then 1 else 0 end) as youtube_thumb_3_count, 
       count(*) as total_count") 
   end
 end
