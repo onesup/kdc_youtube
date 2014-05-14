@@ -1,0 +1,9 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: kdc_youtube_development
+  pool: 5
+  username: root
+  password:
+  host: localhost

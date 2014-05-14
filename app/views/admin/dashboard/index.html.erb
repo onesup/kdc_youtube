@@ -10,48 +10,24 @@
           <thead>
             <tr>
               <th>날짜</th>
-              <th>PC트래픽</th>
               <th>모바일트래픽</th>
             </tr>
           </thead>
           <tbody>
-						<%= render "traffic_stats_table"%>
-            <% @traffic_stats.each do |traffic_stat| %>
-							<% if traffic_stat.created_date > DateTime.parse("2014.4.2") %>
-								<% if traffic_stat.created_date == DateTime.parse("2014.4.3") %>
-		              <tr class="">
+						<% @traffic_stats.each do |traffic_stat| %>
+							    <tr class="">
 		                <td>
 		                  <span><%= traffic_stat.created_date %></span>
-		                </td>
-		                <td>
-		                  <span><%= traffic_stat.pc_count - 83%></span>
-		                </td>
-		                <td>
-		                  <span><%= traffic_stat.mobile_count - 305 %></span>
-		                </td>
-		              </tr>
-								<% else %>
-		              <tr class="">
-		                <td>
-		                  <span><%= traffic_stat.created_date %></span>
-		                </td>
-		                <td>
-		                  <span><%= traffic_stat.pc_count%></span>
 		                </td>
 		                <td>
 		                  <span><%= traffic_stat.mobile_count %></span>
 		                </td>
 		              </tr>								
-								<% end %>
-							<% end %>
             <% end %>
             <% @traffic_stats_sum.each do |traffic_stat| %>
               <tr class="">
                 <td>
                   <span>총합계</span>
-                </td>
-                <td>
-                  <span><%= traffic_stat.pc_count %></span>
                 </td>
                 <td>
                   <span><%= traffic_stat.mobile_count %></span>
@@ -71,19 +47,7 @@
             </tr>
           </thead>
           <tbody>
-						<%= render "viral_stats_table" %>
             <% @viral_stats.each do |viral_stat| %>
-							<% if viral_stat.created_date > DateTime.parse("2014.4.2") %>
-								<% if viral_stat.created_date == DateTime.parse("2014.4.3") %>
-		              <tr class="">
-		                <td>
-		                  <span><%= viral_stat.created_date %></span>
-		                </td>
-		                <td>
-		                  <span><%= viral_stat.viral_count - 11 %></span>
-		                </td>
-		              </tr>
-								<% else %>
 		              <tr class="">
 		                <td>
 		                  <span><%= viral_stat.created_date %></span>
@@ -92,8 +56,6 @@
 		                  <span><%= viral_stat.viral_count %></span>
 		                </td>
 		              </tr>
-								<% end %>
-							<% end %>
             <% end %>
             <% @viral_stats_sum.each do |viral_stat| %>
               <tr class="">
@@ -113,48 +75,24 @@
           <thead>
             <tr>
               <th>날짜</th>
-              <th>PC참여자수</th>
               <th>모바일참여자수</th>
             </tr>
           </thead>
           <tbody>
-						<%= render "user_stats_table"%>
             <% @user_stats.each do |user_stat| %>
-							<% if user_stat.created_date > DateTime.parse("2014.4.2") %>
-								<% if user_stat.created_date == DateTime.parse("2014.4.3") %>
 		              <tr class="">
 		                <td>
 		                  <span><%= user_stat.created_date %></span>
-		                </td>
-		                <td>
-		                  <span><%= user_stat.pc_count - 10 %></span>
-		                </td>
-		                <td>
-		                  <span><%= user_stat.mobile_count - 33 %></span>
-		                </td>
-		              </tr>
-								<% else %>
-		              <tr class="">
-		                <td>
-		                  <span><%= user_stat.created_date %></span>
-		                </td>
-		                <td>
-		                  <span><%= user_stat.pc_count %></span>
 		                </td>
 		                <td>
 		                  <span><%= user_stat.mobile_count %></span>
 		                </td>
 		              </tr>
-								<% end %>
-							<% end %>
             <% end %>
             <% @user_stats_sum.each do |user_stat| %>
               <tr class="">
                 <td>
                   <span>총합계</span>
-                </td>
-                <td>
-                  <span><%= user_stat.pc_count %></span>
                 </td>
                 <td>
                   <span><%= user_stat.mobile_count %></span>

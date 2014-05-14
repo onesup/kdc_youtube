@@ -2,30 +2,57 @@ $(document).ready(function(){
 	$("#info_phone").mask("999-9999-9999");
   $("#info_input_radio");
 	$.ajaxSetup({ cache: true });
-	$.getScript('//connect.facebook.net/ko_KR/all.js', function(){
-		FB.init({
-			appId      : '<%= Rails.application.secrets.fb_app_id %>',
-      channelUrl : '//<%= Rails.application.secrets.url %>/channel.html', // Channel file for x-domain comms
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
-      xfbml      : true  // parse XFBML
-    });
-		FB.Canvas.setSize();
-		FB.Canvas.setAutoGrow();
-		$("#facebook_share_link").click(function(e){
+    	$("#purchase_share_link").click(function(e){
+    		e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "/viral_actions.json",
+            data: {
+              'viral_action[platform]': "Purchase",
+              'viral_action[device]': "mobile"
+            },
+            success: function (data) {
+            }
+        });
+    	});
+		$("#youtube_link_1").click(function(e){
 			e.preventDefault();
       $.ajax({
           type: "POST",
           url: "/viral_actions.json",
           data: {
-            'viral_action[platform]': "Facebook",
+            'viral_action[platform]': "Youtube",
             'viral_action[device]': "mobile"
           },
           success: function (data) {
           }
       });
-			share();
 		});
+    $("#youtube_link_2").click(function(e){
+		e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "/viral_actions.json",
+        data: {
+          'viral_action[platform]': "Youtube",
+          'viral_action[device]': "mobile"
+        },
+        success: function (data) {
+        }
+    });
+	});
+	$("#youtube_link_3").click(function(e){
+		e.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "/viral_actions.json",
+        data: {
+          'viral_action[platform]': "Youtube",
+          'viral_action[device]': "mobile"
+        },
+        success: function (data) {
+        }
+    });
 	});
 	$("#kakaotalk_share_link").click(function(e){
 		e.preventDefault();
@@ -40,9 +67,9 @@ $(document).ready(function(){
       }
       });
 		kakao.link("talk").send({
-			msg : "완전 득템 소식~\n피부생일?!\n에센스 선물까지 준다고!?\n\n숨37과 처음 만나는 순간,\n피부생일이 시작됩니다.\n\nMake Your Skin Birthday\nSponsored by 숨37\n",
-			url : "http://bit.ly/su-m37-kt",
-			appid : "skin_birthday",
+			msg : "조윤호 빡! 끝! 시리즈\n잘못된 꽃담초 사용법?!\n\n애드립 확인!\n",
+			url : "http://event05.lgcare.com?s=ktad",
+			appid : "kdc_youtube",
 			appver : "1.0",
 			appname : "",
 			type : "link"
@@ -61,14 +88,14 @@ $(document).ready(function(){
       }
       });
     kakao.link("story").send({
-      post : "완전 득템 소식~\n피부생일?!\n에센스 선물까지 준다고!?\nhttp://bit.ly/su-m37-ks\n\n숨37과 처음 만나는 순간,\n피부생일이 시작됩니다.\n\nMake Your Skin Birthday\nSponsored by 숨37",
-      appid : "skin_birthday",
+      post : "조윤호 빡! 끝! 시리즈\n잘못된 꽃담초 사용법?!\n\n애드립 확인!\n",
+      appid : "kdc_youtube",
       appver : "1.0",
-      appname : "Skin Birthday",
+      appname : "kdc youtube",
       urlinfo : JSON.stringify({
-        title:"Skin Birthday",
-        desc:"Make Your Skin Birthday Sponsored by 숨37",
-        imageurl:['https://<%= Rails.application.secrets.url + asset_url("sns/facebook_share.jpg") %>'],
+        title:"꽃담초",
+        desc:"꽃담초",
+        imageurl:['https://<%= Rails.application.secrets.url + asset_url("sns/kakaostory_share.jpg") %>'],
         type:"article"
       })
     });
