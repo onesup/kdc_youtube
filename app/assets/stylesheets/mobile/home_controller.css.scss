@@ -6,16 +6,14 @@ body{
 	background: #ffd900;
 }
 .contain{
-	width: 100%;
+	width: 92%;
+	margin:4%;
 }
-.content{
-	width: 100%;
-	position: relative;
-    clear: both;
-}
+
 .header{
 	width: 100%;
 	margin-top: 3%;
+	margin-bottom: 2%;
 }
 .title{
   width: 100%;
@@ -25,14 +23,68 @@ body{
 	width: 85%;
 	margin: 3% 0 3% 0;
 }
+.movie{
+	width: 100%;
+}
+.img{
+ text-align:center;	
+}
 .kdc_img{
-  width: 100%;
+  width: 95%;
+}
+.movie{
+	width: 100%;
+	margin-bottom: 2%;
+}
+.thumb{
+	margin-bottom: 7%;
+}
+.thumb a{
+	display:block;
+	float:left;
+	width:33%;
+}
+.thumb a.t_02{
+	text-align:center;
+	width:34%;
+}
+.thumb a.t_03{
+	text-align:right;
+}
+.thumb a img{
+  width: 98%;
 }
 
-.youtube_thumb_img{
-  width: 32%;
-  
+.outlink{
+	background:#fff;
+	padding:5% 4% 8%;
 }
+.outlink .inner{
+	width:100%;
+}
+.outlink .inner a{
+	display:block;
+	float:left;
+}
+.outlink .inner a.t_01{
+	width:56%;
+}
+.outlink .inner a.t_02{
+	width:22%;
+	text-align:right;
+}
+.outlink .inner a.t_03{
+	width:22%;
+	text-align:right;
+}
+.outlink .inner a img{
+	width: 100%;
+}
+.outlink .inner a.t_02 img,
+.outlink .inner a.t_03 img{
+	width: 84%;
+}
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -47,13 +99,5 @@ body{
   display: block;
   text-indent: -9999em;
 }
-.btn_buy_img{
-width: 45%;  
-}
-.btn_kt_img{
-width: 15%;   
-}
-.btn_ks_img{
-width: 15%; 
-}
+
 

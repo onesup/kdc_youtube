@@ -1,21 +1,23 @@
 <div class="contain">
-  <div class="header">
-    <%= image_tag("title.png", class: "title") %>
-  </div>
-  <div class="movie">
-    <iframe width="300" height="210" src="//www.youtube.com/embed/bax4BgeYnGI" frameborder="0" allowfullscreen class="video"></iframe>
-  </div>
-  <div class="thumb">
-    <a href="#" id="youtube_link_1"><%= image_tag("thumb_01.png", class: "youtube_thumb_img") %></a>
-    <a href="#" id="youtube_link_2"><%= image_tag("thumb_01.png", class: "youtube_thumb_img") %></a>
-    <a href="#" id="youtube_link_3"><%= image_tag("thumb_01.png", class: "youtube_thumb_img") %></a>
-  </div>
-  <div class="img">
-	   <%= image_tag("kdc_img.png", class:"kdc_img") %>
-  </div>  
-  <div class="outlink">
-    <a href="#" id="purchase_share_link"><%= image_tag("btn_buy.png", class: "btn_buy_img") %></a>
-    <a href="#" id="kakaotalk_share_link"><%= image_tag("btn_kt.png", class: "btn_kt_img") %></a>
-    <a href="#" id="kakaostory_share_link"><%= image_tag("btn_ks.png", class: "btn_ks_img") %></a>
-  </div>
+	<div class="header">
+		<%= image_tag("title.png", class: "title") %>
+	</div>
+	<div class="movie">
+		<iframe width="100%" height="210" src="//www.youtube.com/embed/8X6nCG95J1Y" frameborder="0" allowfullscreen class="video"></iframe>
+	</div>
+	<div class="thumb clearfix">
+		<%= link_to image_tag("thumb_01.png", class: "youtube_thumb_img"), '#', target:"_blank", class:"t_01", id:"youtube_link_1" %>
+		<%= link_to image_tag("thumb_02.png", class: "youtube_thumb_img"), '#', target:"_blank", class:"t_02", id:"youtube_link_2" %>
+		<%= link_to image_tag("thumb_03.png", class: "youtube_thumb_img"), '#', target:"_blank", class:"t_03", id:"youtube_link_3" %>
+	</div>
+	<div class="img">
+		<%= image_tag("kdc_img.png", class:"kdc_img") %>
+	</div>  
+</div>
+<div class="outlink">
+	<div class="inner clearfix">
+		<%= link_to image_tag("btn_buy.png", class: "btn_buy_img"), '#', target:"_blank", class:"t_01", id:"purchase_share_link"  %>
+		<%= link_to image_tag("btn_kt.png", class: "btn_kt_img"), '#', target:"_blank", class:"t_02", id:"kakaotalk_share_link"  %>
+		<%= link_to image_tag("btn_ks.png", class: "btn_ks_img"), '#', target:"_blank", class:"t_03", id:"kakaostory_share_link"  %>
+	</div>
 </div>
