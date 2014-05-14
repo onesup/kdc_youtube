@@ -68,7 +68,7 @@ $(document).ready(function(){
       });
 		kakao.link("talk").send({
 			msg : "당신의 피곤한 냄새를\n조윤호의 영상으로 빡!\n",
-			url : "http://event05.lgcare.com?s=ktad",
+			url : "http://event05.lgcare.com?s=kt",
 			appid : "kdc_youtube",
 			appver : "1.0",
 			appname : "",
@@ -88,14 +88,14 @@ $(document).ready(function(){
       }
       });
     kakao.link("story").send({
-      post : "▲카카오스토리 첫/공/개▲\n피곤한 냄새를 조윤호의 영상으로 빡!\n\n",
+      post : "▲카카오스토리 첫/공/개▲\n피곤한 냄새를 조윤호의 영상으로 빡!\n\nhttp://event05.lgcare.com?s=ks",
       appid : "kdc_youtube",
       appver : "1.0",
       appname : "kdc youtube",
       urlinfo : JSON.stringify({
         title:"꽃담초",
         desc:"꽃담초",
-        imageurl:['https://<%= Rails.application.secrets.url + asset_url("sns/kakaostory_share.jpg") %>'],
+        imageurl:['https://<%= Rails.application.secrets.url + asset_url("kakao_share.jpg") %>'],
         type:"article"
       })
     });
