@@ -1,8 +1,8 @@
 # config valid only for Capistrano 3.1
-lock '3.1.0'
+lock '3.2.0'
 
-set :application, 'bday'
-set :repo_url, 'git@github.com:onesup/bday37.git'
+set :application, 'kdc_youtube'
+set :repo_url, 'git@github.com:onesup/kdc_youtube.git'
 set :scm_user, "onesup"
 
 
@@ -10,7 +10,7 @@ set :scm_user, "onesup"
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, "/home/deployer/www/bday"
+set :deploy_to, "/home/deployer/www/kdc_youtube"
 set :user, "deployer"
 
 
