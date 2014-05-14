@@ -67,8 +67,8 @@ $(document).ready(function(){
       }
       });
 		kakao.link("talk").send({
-			msg : "조윤호 빡! 끝! 시리즈\n잘못된 꽃담초 사용법?!\n\n애드립 확인!\n",
-			url : "http://event05.lgcare.com?s=ktad",
+			msg : "당신의 피곤한 냄새를\n조윤호의 영상으로 빡!\n",
+			url : "http://bit.ly/kdcmovie",
 			appid : "kdc_youtube",
 			appver : "1.0",
 			appname : "",
@@ -88,14 +88,14 @@ $(document).ready(function(){
       }
       });
     kakao.link("story").send({
-      post : "조윤호 빡! 끝! 시리즈\n잘못된 꽃담초 사용법?!\n\n애드립 확인!\n",
-      appid : "kdc_youtube",
+      post : "▲카카오스토리 첫/공/개▲\n피곤한 냄새를 조윤호의 영상으로 빡!\n\nhttp://bit.ly/kdcks",
+      appid : "kdc_youtube1",
       appver : "1.0",
       appname : "kdc youtube",
       urlinfo : JSON.stringify({
         title:"꽃담초",
         desc:"꽃담초",
-        imageurl:['https://<%= Rails.application.secrets.url + asset_url("sns/kakaostory_share.jpg") %>'],
+        imageurl:['https://<%= Rails.application.secrets.url + asset_url("kakao_share.jpg") %>'],
         type:"article"
       })
     });
