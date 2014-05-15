@@ -13,7 +13,7 @@ $(document).ready(function(){
             },
             success: function (data) {
 							var url = $("#purchase_share_link").attr("href");
-							window.open(url,'_blank')
+							window.location.href = url;     
             }
         });
     	});
