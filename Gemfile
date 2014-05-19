@@ -29,6 +29,8 @@ gem 'kaminari'
 gem 'debugger', group: [:development, :test]
 # gem 'dragonfly', "~>1.0.3"
 gem 'koala'
+# gem 'yaml_db', path: "/Users/daul/projects/yaml_db"
+gem 'yaml_db', github: 'onesup/yaml_db'
 # gem 'rack-facebook-signed-request', :git => 'git://github.com/cmer/rack-facebook-signed-request.git'
 group :development do
   gem 'guard-rails',        group: :development

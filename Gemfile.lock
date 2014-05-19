@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/onesup/yaml_db.git
+  revision: 67217c12e7cd74d0d319b795b3afee91b64f68df
+  specs:
+    yaml_db (0.2.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -295,3 +301,4 @@ DEPENDENCIES
   uglifier
   unicorn
   useragent
+  yaml_db!
