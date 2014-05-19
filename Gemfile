@@ -30,7 +30,7 @@ gem 'debugger', group: [:development, :test]
 # gem 'dragonfly', "~>1.0.3"
 gem 'koala'
 # gem 'yaml_db', path: "/Users/daul/projects/yaml_db"
-gem 'yaml_db', github: 'onesup/yaml_db', ref: '6eeb9b831a7e4612d637ed76012361e5ced26559'
+gem 'yaml_db', github: 'onesup/yaml_db', ref: '0fc263989a00889aa8ac67e9f62920015b79e35f'
 # gem 'rack-facebook-signed-request', :git => 'git://github.com/cmer/rack-facebook-signed-request.git'
 group :development do
   gem 'guard-rails',        group: :development
