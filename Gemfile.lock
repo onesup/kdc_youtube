@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/onesup/yaml_db.git
-  revision: 6eeb9b831a7e4612d637ed76012361e5ced26559
-  ref: 6eeb9b831a7e4612d637ed76012361e5ced26559
+  revision: 0fc263989a00889aa8ac67e9f62920015b79e35f
+  ref: 0fc263989a00889aa8ac67e9f62920015b79e35f
   specs:
     yaml_db (0.2.3)
 
