@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/onesup/yaml_db.git
-  revision: 0fc263989a00889aa8ac67e9f62920015b79e35f
-  ref: 0fc263989a00889aa8ac67e9f62920015b79e35f
+  revision: 9c609eb7bd64345c8569cb572085ff1bac7ef362
+  ref: 9c609eb7bd64345c8569cb572085ff1bac7ef362
   specs:
     yaml_db (0.2.3)
 
@@ -227,8 +227,6 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
       term-ansicolor
-    sucker_punch (1.0.3)
-      celluloid (~> 0.15.2)
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     therubyracer (0.12.1)
@@ -253,7 +251,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    useragent (0.10.0)
     warden (1.2.3)
       rack (>= 1.0)
     xpath (2.0.0)
@@ -296,10 +293,8 @@ DEPENDENCIES
   simple_form
   spring
   sqlite3
-  sucker_punch (~> 1.0)
   therubyracer
   turbolinks
   uglifier
   unicorn
-  useragent
   yaml_db!
