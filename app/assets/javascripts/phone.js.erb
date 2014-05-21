@@ -3,7 +3,7 @@ $(document).ready(function(){
   $("#info_input_radio");
 	$.ajaxSetup({ cache: true });
     	$("#purchase_share_link").click(function(e){
-    		e.preventDefault();
+    		// e.preventDefault();
         $.ajax({
             type: "POST",
             url: "/viral_actions.json",
